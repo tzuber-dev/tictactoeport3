@@ -131,18 +131,22 @@ int main() {
             std::getline(std::cin, inputuserfield);
 
 
+
+
+
             if (!selectnewtrapfunction(inputuserfield)) {
                 std::cout<<"! INVALID INPUT, RETRY !"<<"\n";
                 continue;
-            };
+            }
 
 
             if (inputuserfield[0] =='1') {
+                std::cout<<"Trap cell is activated!"<<std::endl;
                 tictactoe.activatetrapcellwhenever();
             } else {
                 tictactoe.deactivatetrapcell();
                 std::cout<<"Trap cell is not activated this round!"<<std::endl;
-            }
+            };
 
 
             break;
